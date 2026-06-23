@@ -104,15 +104,18 @@ export default function ConversationDetailPage() {
   });
 
   const {
-    data: plainMessagesData,
-    isLoading: plainLoading,
-    isError: plainError,
-    refetch: refetchPlainMessages,
-  } = useQuery({
-    queryKey: queryKeys.conversationMessages(conversationId),
-    queryFn: () => messagingService.getMessages(conversationId),
-    enabled: securityMode === "normal",
-  });
+  data: plainMessagesData,
+  isLoading: plainLoading,
+  isError: plainError,
+  refetch: refetchPlainMessages,
+} = useQuery({
+  queryKey: queryKeys.conversationMessages(conversationId),
+  queryFn: () => messagingService.getMessages(conversationId),
+  enabled: securityMode === "normal",
+  refetchInterval: securityMode === "normal" ? 2000 : false,
+  refetchIntervalInBackground: true,
+  refetchOnWindowFocus: true,
+});
 
   const {
     data: cryptoDevicesData,
@@ -166,16 +169,19 @@ export default function ConversationDetailPage() {
         body: body.trim(),
         message_type: "text",
       }),
-    onSuccess: () => {
-      setBody("");
-      queryClient.invalidateQueries({
-        queryKey: queryKeys.conversationMessages(conversationId),
-      });
-      queryClient.invalidateQueries({ queryKey: queryKeys.conversations });
-    },
-    onError: (error) => {
-      toast.error("Could not send message", extractErrorMessage(error));
-    },
+    onSuccess: async () => {
+  setBody("");
+
+  await queryClient.invalidateQueries({
+    queryKey: queryKeys.conversationMessages(conversationId),
+  });
+
+  await queryClient.invalidateQueries({
+    queryKey: queryKeys.conversations,
+  });
+
+  await refetchPlainMessages();
+},
   });
 
 
