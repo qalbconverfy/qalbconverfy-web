@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { CheckCircle2, XCircle, Loader2 } from "lucide-react";
 
 type Status = "loading" | "success" | "error";
 
@@ -14,9 +13,8 @@ export default function VerifyEmailPage() {
   const [message, setMessage] = useState("Verifying your email...");
 
   useEffect(() => {
-    const verifyEmail = async () => {
-      const params = new URLSearchParams(window.location.search);
-      const token = params.get("token");
+    async function verifyEmail() {
+      const token = new URLSearchParams(window.location.search).get("token");
 
       if (!token) {
         setStatus("error");
@@ -25,85 +23,58 @@ export default function VerifyEmailPage() {
       }
 
       try {
-        const response = await fetch(
-          `${API_BASE_URL}/api/v1/users/verify-email/?token=${encodeURIComponent(token)}`,
-          {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
+        const response = await fetch(`${API_BASE_URL}/api/v1/auth/verify-email/`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ token }),
+        });
 
         const data = await response.json().catch(() => null);
 
         if (!response.ok) {
-          throw new Error(
-            data?.detail ||
-              data?.message ||
-              "Email verification failed. Token may be invalid or expired."
-          );
+          throw new Error(data?.detail || "Email verification failed.");
         }
 
         setStatus("success");
-        setMessage(
-          data?.message || "Your email has been verified successfully."
-        );
+        setMessage(data?.message || "Email verified successfully.");
       } catch (error) {
         setStatus("error");
         setMessage(
-          error instanceof Error
-            ? error.message
-            : "Email verification failed."
+          error instanceof Error ? error.message : "Email verification failed."
         );
       }
-    };
+    }
 
     verifyEmail();
   }, []);
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950 flex items-center justify-center px-4">
-      <section className="w-full max-w-md rounded-3xl bg-white/95 p-8 shadow-2xl text-center">
-        <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-purple-600 text-white shadow-lg">
-          {status === "loading" && <Loader2 className="h-10 w-10 animate-spin" />}
-          {status === "success" && <CheckCircle2 className="h-11 w-11" />}
-          {status === "error" && <XCircle className="h-11 w-11" />}
-        </div>
-
+    <main className="min-h-screen flex items-center justify-center bg-slate-950 px-4">
+      <section className="w-full max-w-md rounded-3xl bg-white p-8 text-center shadow-2xl">
         <h1 className="text-3xl font-black text-slate-900">
           {status === "loading" && "Verifying Email"}
           {status === "success" && "Email Verified"}
           {status === "error" && "Verification Failed"}
         </h1>
 
-        <p className="mt-4 text-base leading-7 text-slate-600">{message}</p>
+        <p className="mt-4 text-slate-600">{message}</p>
 
-        <div className="mt-8 flex flex-col gap-3">
-          {status === "success" && (
+        <div className="mt-8">
+          {status === "success" ? (
             <Link
               href="/login"
-              className="rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 px-5 py-3 font-bold text-white shadow-lg"
+              className="block rounded-2xl bg-purple-600 px-5 py-3 font-bold text-white"
             >
               Go to Login
             </Link>
-          )}
-
-          {status === "error" && (
+          ) : (
             <Link
-              href="/signup"
-              className="rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 px-5 py-3 font-bold text-white shadow-lg"
+              href="/"
+              className="block rounded-2xl bg-slate-900 px-5 py-3 font-bold text-white"
             >
-              Create Account Again
+              Back to Home
             </Link>
           )}
-
-          <Link
-            href="/"
-            className="rounded-2xl border border-slate-200 px-5 py-3 font-semibold text-slate-700"
-          >
-            Back to Home
-          </Link>
         </div>
       </section>
     </main>
