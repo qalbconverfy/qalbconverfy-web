@@ -3,14 +3,34 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --brand-blue: #2f80ff;
+    --brand-violet: #7c3aed;
+    --brand-pink: #d946ef;
+
+    --bg-primary: #f8fafc;
+    --text-primary: #0f172a;
+    --border-color: #e2e8f0;
+  }
+
   html,
   body {
-    background-color: #f8fafc;
-    color: #0f172a;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
   }
 
   * {
-    border-color: #1f2937;
+    border-color: var(--border-color);
+  }
+
+  body {
+    min-height: 100vh;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  ::selection {
+    background: #8b5cf6;
+    color: white;
   }
 
   ::-webkit-scrollbar {
@@ -23,7 +43,48 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: #1f2937;
+    background: linear-gradient(
+      180deg,
+      var(--brand-blue),
+      var(--brand-violet),
+      var(--brand-pink)
+    );
     border-radius: 9999px;
+  }
+}
+
+@layer components {
+  .brand-gradient {
+    background: linear-gradient(
+      135deg,
+      #2f80ff 0%,
+      #7c3aed 50%,
+      #d946ef 100%
+    );
+  }
+
+  .brand-text {
+    background: linear-gradient(
+      135deg,
+      #2f80ff 0%,
+      #7c3aed 50%,
+      #d946ef 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .brand-card {
+    @apply rounded-3xl bg-white shadow-xl shadow-purple-100;
+  }
+
+  .brand-button {
+    @apply rounded-2xl px-5 py-3 text-white font-bold;
+    background: linear-gradient(
+      135deg,
+      #2f80ff 0%,
+      #7c3aed 50%,
+      #d946ef 100%
+    );
   }
 }
