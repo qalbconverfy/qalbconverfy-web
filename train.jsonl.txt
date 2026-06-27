@@ -1,0 +1,80 @@
+{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hello! How can I help you?"}]}
+{"messages":[{"role":"user","content":"Hello"},{"role":"assistant","content":"Hi there! How can I help you today?"}]}
+{"messages":[{"role":"user","content":"Good morning"},{"role":"assistant","content":"Good morning! Hope you have a great day."}]}
+{"messages":[{"role":"user","content":"Good afternoon"},{"role":"assistant","content":"Good afternoon! How can I help you?"}]}
+{"messages":[{"role":"user","content":"Good evening"},{"role":"assistant","content":"Good evening! What can I do for you?"}]}
+{"messages":[{"role":"user","content":"Hey"},{"role":"assistant","content":"Hey! Nice to meet you."}]}
+{"messages":[{"role":"user","content":"How are you?"},{"role":"assistant","content":"I am doing well. How about you?"}]}
+{"messages":[{"role":"user","content":"What is your name?"},{"role":"assistant","content":"My name is Zikriyon."}]}
+{"messages":[{"role":"user","content":"Who are you?"},{"role":"assistant","content":"I am Zikriyon, your AI assistant."}]}
+{"messages":[{"role":"user","content":"Nice to meet you"},{"role":"assistant","content":"Nice to meet you too!"}]}
+{"messages":[{"role":"user","content":"Thank you"},{"role":"assistant","content":"You are welcome."}]}
+{"messages":[{"role":"user","content":"Thanks"},{"role":"assistant","content":"You are welcome."}]}
+{"messages":[{"role":"user","content":"Can you help me?"},{"role":"assistant","content":"Yes, I can help you."}]}
+{"messages":[{"role":"user","content":"What can you do?"},{"role":"assistant","content":"I can answer questions, explain ideas, and help with coding."}]}
+{"messages":[{"role":"user","content":"Are you an AI?"},{"role":"assistant","content":"Yes, I am an AI assistant."}]}
+{"messages":[{"role":"user","content":"Tell me a joke"},{"role":"assistant","content":"Why did the computer go to school? To improve its skills."}]}
+{"messages":[{"role":"user","content":"Good night"},{"role":"assistant","content":"Good night! Sleep well."}]}
+{"messages":[{"role":"user","content":"Bye"},{"role":"assistant","content":"Goodbye! See you later."}]}
+{"messages":[{"role":"user","content":"See you"},{"role":"assistant","content":"See you soon!"}]}
+{"messages":[{"role":"user","content":"What is Python?"},{"role":"assistant","content":"Python is a programming language."}]}
+{"messages":[{"role":"user","content":"What is machine learning?"},{"role":"assistant","content":"Machine learning helps computers learn from data."}]}
+{"messages":[{"role":"user","content":"Explain AI"},{"role":"assistant","content":"AI is the field of making machines perform intelligent tasks."}]}
+{"messages":[{"role":"user","content":"What is a model?"},{"role":"assistant","content":"A model is a system that learns patterns from data."}]}
+{"messages":[{"role":"user","content":"What is training?"},{"role":"assistant","content":"Training is the process of teaching a model from examples."}]}
+{"messages":[{"role":"user","content":"What is a checkpoint?"},{"role":"assistant","content":"A checkpoint is a saved training state."}]}
+{"messages":[{"role":"user","content":"Why use checkpoints?"},{"role":"assistant","content":"Checkpoints help you resume training later."}]}
+{"messages":[{"role":"user","content":"What is a tokenizer?"},{"role":"assistant","content":"A tokenizer splits text into tokens for the model."}]}
+{"messages":[{"role":"user","content":"What is JSONL?"},{"role":"assistant","content":"JSONL is a format with one JSON object per line."}]}
+{"messages":[{"role":"user","content":"What is a dataset?"},{"role":"assistant","content":"A dataset is a collection of examples used for training."}]}
+{"messages":[{"role":"user","content":"Can you explain this error?"},{"role":"assistant","content":"Yes, share the error message and I will explain it."}]}
+{"messages":[{"role":"user","content":"I am learning coding"},{"role":"assistant","content":"That is great! I can help you practice coding."}]}
+{"messages":[{"role":"user","content":"I like programming"},{"role":"assistant","content":"Programming is a useful skill to learn."}]}
+{"messages":[{"role":"user","content":"How do I start coding?"},{"role":"assistant","content":"Start with small programs and practice every day."}]}
+{"messages":[{"role":"user","content":"What is deep learning?"},{"role":"assistant","content":"Deep learning uses neural networks with many layers."}]}
+{"messages":[{"role":"user","content":"What is a neural network?"},{"role":"assistant","content":"A neural network is a model inspired by the brain."}]}
+{"messages":[{"role":"user","content":"What is a transformer?"},{"role":"assistant","content":"A transformer is a model that uses attention."}]}
+{"messages":[{"role":"user","content":"What is attention?"},{"role":"assistant","content":"Attention helps the model focus on important tokens."}]}
+{"messages":[{"role":"user","content":"How do I save progress?"},{"role":"assistant","content":"Use checkpoints to save progress during training."}]}
+{"messages":[{"role":"user","content":"What should I train first?"},{"role":"assistant","content":"Start with general conversation data, then add coding data."}]}
+{"messages":[{"role":"user","content":"Can you code in Python?"},{"role":"assistant","content":"Yes, I can help write Python code."}]}
+{"messages":[{"role":"user","content":"Write a function"},{"role":"assistant","content":"Sure, tell me what function you need."}]}
+{"messages":[{"role":"user","content":"Help me debug"},{"role":"assistant","content":"Paste the code and error, and I will help debug it."}]}
+{"messages":[{"role":"user","content":"What is overfitting?"},{"role":"assistant","content":"Overfitting happens when a model learns the training data too well."}]}
+{"messages":[{"role":"user","content":"What is validation data?"},{"role":"assistant","content":"Validation data is used to check model performance."}]}
+{"messages":[{"role":"user","content":"What is testing data?"},{"role":"assistant","content":"Testing data is used for final evaluation."}]}
+{"messages":[{"role":"user","content":"How does the model learn?"},{"role":"assistant","content":"It learns by predicting the next token and reducing error."}]}
+{"messages":[{"role":"user","content":"What is loss?"},{"role":"assistant","content":"Loss measures how wrong the model predictions are."}]}
+{"messages":[{"role":"user","content":"What is learning rate?"},{"role":"assistant","content":"Learning rate controls how big each update step is."}]}
+{"messages":[{"role":"user","content":"What is an epoch?"},{"role":"assistant","content":"An epoch is one full pass over the training data."}]}
+{"messages":[{"role":"user","content":"What is a batch?"},{"role":"assistant","content":"A batch is a small group of training examples."}]}
+{"messages":[{"role":"user","content":"Can you explain checkpoints?"},{"role":"assistant","content":"Yes, checkpoints save the model so you can continue later."}]}
+{"messages":[{"role":"user","content":"I want to build an AI"},{"role":"assistant","content":"Start small, test often, and improve step by step."}]}
+{"messages":[{"role":"user","content":"How do I improve my model?"},{"role":"assistant","content":"Use better data, longer training, and proper evaluation."}]}
+{"messages":[{"role":"user","content":"What is inference?"},{"role":"assistant","content":"Inference is using a trained model to generate output."}]}
+{"messages":[{"role":"user","content":"What is token prediction?"},{"role":"assistant","content":"Token prediction means guessing the next word or token."}]}
+{"messages":[{"role":"user","content":"Why is data important?"},{"role":"assistant","content":"Good data helps the model learn useful patterns."}]}
+{"messages":[{"role":"user","content":"What is a prompt?"},{"role":"assistant","content":"A prompt is the input given to the model."}]}
+{"messages":[{"role":"user","content":"What is output?"},{"role":"assistant","content":"Output is the model response or prediction."}]}
+{"messages":[{"role":"user","content":"How do I make the model smarter?"},{"role":"assistant","content":"Train it on more clean and relevant examples."}]}
+{"messages":[{"role":"user","content":"Can it learn greetings?"},{"role":"assistant","content":"Yes, greetings are a good first training task."}]}
+{"messages":[{"role":"user","content":"Can it learn conversations?"},{"role":"assistant","content":"Yes, conversation examples help it chat better."}]}
+{"messages":[{"role":"user","content":"Can it learn code?"},{"role":"assistant","content":"Yes, code examples help it generate programming answers."}]}
+{"messages":[{"role":"user","content":"Should I mix data types?"},{"role":"assistant","content":"Yes, mixing general and coding data is useful."}]}
+{"messages":[{"role":"user","content":"What is supervised learning?"},{"role":"assistant","content":"Supervised learning uses input and correct output pairs."}]}
+{"messages":[{"role":"user","content":"What is fine-tuning?"},{"role":"assistant","content":"Fine-tuning adapts a model to your specific data."}]}
+{"messages":[{"role":"user","content":"What is a corpus?"},{"role":"assistant","content":"A corpus is a large collection of text."}]}
+{"messages":[{"role":"user","content":"What is BPE?"},{"role":"assistant","content":"BPE is a tokenizer method that merges common symbol pairs."}]}
+{"messages":[{"role":"user","content":"Why train tokenizer first?"},{"role":"assistant","content":"Tokenizer training prepares text for the model."}]}
+{"messages":[{"role":"user","content":"How do I evaluate?"},{"role":"assistant","content":"Use validation loss, perplexity, and sample outputs."}]}
+{"messages":[{"role":"user","content":"What is perplexity?"},{"role":"assistant","content":"Perplexity is a measure of language model uncertainty."}]}
+{"messages":[{"role":"user","content":"Can you help me build Zikriyon?"},{"role":"assistant","content":"Yes, I can help you step by step."}]}
+{"messages":[{"role":"user","content":"Is training expensive?"},{"role":"assistant","content":"It depends on model size, data, and hardware."}]}
+{"messages":[{"role":"user","content":"How long will it take?"},{"role":"assistant","content":"That depends on dataset size and your laptop speed."}]}
+{"messages":[{"role":"user","content":"Can I train on laptop?"},{"role":"assistant","content":"Yes, but start with a small model and small dataset."}]}
+{"messages":[{"role":"user","content":"Should I use GPU?"},{"role":"assistant","content":"A GPU is helpful for faster training."}]}
+{"messages":[{"role":"user","content":"What if training stops?"},{"role":"assistant","content":"You can resume from a checkpoint."}]}
+{"messages":[{"role":"user","content":"What if I change code?"},{"role":"assistant","content":"Reinstall with pip install -e . if package code changes."}]}
+{"messages":[{"role":"user","content":"What if I change data?"},{"role":"assistant","content":"If only data changes, rerun training."}]}
+{"messages":[{"role":"user","content":"Can I use one file for everything?"},{"role":"assistant","content":"It is better to split train, valid, and test files."}]}
+{"messages":[{"role":"user","content":"What is the best first step?"},{"role":"assistant","content":"Start with a small dataset and run overfit testing."}]}

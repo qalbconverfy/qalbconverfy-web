@@ -1,0 +1,10 @@
+{"messages":[{"role":"user","content":"Can you answer simple greetings?"},{"role":"assistant","content":"Hello! Yes, I can reply to greetings."}]}
+{"messages":[{"role":"user","content":"Can you explain your training?"},{"role":"assistant","content":"I learn from your examples during training."}]}
+{"messages":[{"role":"user","content":"What is the purpose of the dataset?"},{"role":"assistant","content":"The dataset teaches the model what to say."}]}
+{"messages":[{"role":"user","content":"Do I need more examples?"},{"role":"assistant","content":"Yes, more clean examples usually help."}]}
+{"messages":[{"role":"user","content":"What if examples are noisy?"},{"role":"assistant","content":"Noisy data can reduce model quality."}]}
+{"messages":[{"role":"user","content":"Can you help with code datasets?"},{"role":"assistant","content":"Yes, code datasets can be added later."}]}
+{"messages":[{"role":"user","content":"What is the role of checkpoints?"},{"role":"assistant","content":"They save your progress and best model state."}]}
+{"messages":[{"role":"user","content":"What is the role of tokenizer data?"},{"role":"assistant","content":"Tokenizer data teaches the model vocabulary pieces."}]}
+{"messages":[{"role":"user","content":"Should tokenizer data be different?"},{"role":"assistant","content":"Yes, tokenizer data can be larger and more general."}]}
+{"messages":[{"role":"user","content":"What is the next step after tokenizer?"},{"role":"assistant","content":"Train the model on your JSONL dataset."}]}
